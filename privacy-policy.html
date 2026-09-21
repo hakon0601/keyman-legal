@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyman — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0f1210;
+      --fg: #e8ebe6;
+      --muted: #9aa396;
+      --accent: #c4d4a8;
+      --rule: #2a312a;
+      --warn: #e0b36a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", "Source Sans 3", "Segoe UI", sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2418 0%, var(--bg) 55%);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 {
+      font-family: "IBM Plex Serif", "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      letter-spacing: -0.02em;
+      margin: 0 0 0.35rem;
+    }
+    .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .banner {
+      border: 1px solid var(--warn);
+      background: rgba(224, 179, 106, 0.08);
+      color: var(--warn);
+      padding: 0.9rem 1rem;
+      margin: 0 0 1.75rem;
+      font-size: 0.95rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 2rem 0 0.6rem;
+      padding-top: 0.4rem;
+      border-top: 1px solid var(--rule);
+    }
+    p, li { color: var(--fg); }
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    a { color: var(--accent); }
+    .footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Keyman Privacy Policy</h1>
+  <p class="meta">Effective date: 18 September 2026 · Applies to the Keyman iOS app and related Keyman software you choose to run.</p>
+
+  <div class="banner">
+    <strong>Experimental software.</strong> Keyman is a highly experimental voice / LLM assistant.
+    There is <em>no</em> guarantee of confidentiality, correctness, safety, or security.
+    Using it means you accept that prompts, audio, and tool actions may leave your device
+    and may be processed by systems we do not control (cloud LLM vendors, your own Keyman box,
+    Homebridge, and other services you configure).
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>
+    Keyman is developed by Håkon Gimse (“we”, “us”). This policy describes how the
+    <strong>Keyman iOS app</strong> (<code>com.keyman.app</code>) handles information, and how that
+    relates to optional Keyman server software (for example on a Raspberry Pi) and third-party AI providers.
+  </p>
+  <p>
+    We do not operate a Keyman cloud that receives your chats by default. Most processing is
+    on your phone, on hardware you run, or at vendors <em>you</em> connect with your own API keys.
+  </p>
+
+  <h2>2. What Keyman can access</h2>
+  <p>Depending on features you enable, the app may use:</p>
+  <ul>
+    <li><strong>Microphone</strong> — wake word listening, voice commands, speech-to-text.</li>
+    <li><strong>Local network</strong> — to reach a Keyman box you configure on your LAN or Tailscale.</li>
+    <li><strong>Background audio</strong> — so playback / listening can continue briefly while the screen is locked.</li>
+    <li><strong>On-device storage</strong> — conversation history, preferences, downloaded models.</li>
+    <li><strong>Keychain</strong> — API keys and invite codes you paste in (never logged by the app).</li>
+    <li><strong>Clipboard</strong> — only if you copy message text yourself.</li>
+    <li><strong>Internet</strong> — model downloads (e.g. Hugging Face), cloud LLM APIs, and your Keyman server.</li>
+  </ul>
+  <p>
+    The app requests the permissions needed for these features. Granting a permission does not
+    mean we “collect everything for advertising”; it means the feature can run. You can deny
+    microphone or local network access and use text-only / on-device modes where available.
+  </p>
+
+  <h2>3. Data the app handles</h2>
+  <ul>
+    <li><strong>Audio</strong> — recorded for wake word and transcription. On-device Whisper processes audio on the phone when that mode is selected. If you use a Keyman box with online or server STT, audio or transcripts may be sent to that box (and onward to whatever STT provider the box is configured to use).</li>
+    <li><strong>Chat content</strong> — messages, tool results, and conversation history stored in the app’s Documents area. Content you send in <em>Sky</em> modes goes directly from the phone to OpenAI, Anthropic, or xAI using <em>your</em> key. Content you send in server modes goes to your Keyman box, which may call cloud LLMs, home automation, calendars, search, and other tools.</li>
+    <li><strong>Preferences &amp; identifiers</strong> — LLM/STT/TTS settings, server addresses, tool toggles, and a random client id in UserDefaults (so the box can keep per-client settings).</li>
+    <li><strong>Secrets you supply</strong> — cloud API keys and invite codes in Keychain; they are sent only to the corresponding provider or your box when you use that feature.</li>
+    <li><strong>Sensitive information</strong> — we do not ask for health, financial, or government data. Anything you type or say into an LLM can still include sensitive content. Treat every conversation as potentially recorded and potentially forwarded.</li>
+  </ul>
+
+  <h2>4. What we (the developers) do <em>not</em> do</h2>
+  <ul>
+    <li>We do not sell personal data.</li>
+    <li>We do not use your chats for advertising or cross-app tracking (no ATT / IDFA tracking).</li>
+    <li>We do not operate analytics SDKs that phone home from the iOS app for marketing.</li>
+    <li>We cannot see Keychain values on your phone, and we do not receive your cloud API keys through the Keyman box in Sky mode.</li>
+  </ul>
+
+  <h2>5. Third parties and systems we do not control</h2>
+  <p>
+    When you enable them, data may be processed by:
+  </p>
+  <ul>
+    <li><strong>OpenAI, Anthropic, xAI</strong> (Sky) — subject to <em>their</em> privacy policies and retention.</li>
+    <li><strong>Your Keyman server</strong> — often has <strong>no authentication</strong> on the LAN / Tailscale path; anyone who can reach it can use its tools. Transcripts and earshot memory may be stored in plaintext on that machine.</li>
+    <li><strong>Homebridge and other home / web services</strong> configured on the box.</li>
+    <li><strong>Hugging Face</strong> (or similar) when downloading on-device models.</li>
+    <li><strong>Apple</strong> — standard OS processing (speech synthesis voices, Keychain, etc.).</li>
+  </ul>
+  <p>
+    LLM providers and a compromised or misconfigured box may log, train on, leak, or mishandle
+    prompts. <strong>We accept no responsibility for what those systems do.</strong>
+  </p>
+
+  <h2>6. Children</h2>
+  <p>
+    Keyman is not directed at children under 13 (or the minimum age in your jurisdiction).
+    Do not use it to process children’s data if applicable law forbids it.
+  </p>
+
+  <h2>7. Retention and deletion</h2>
+  <ul>
+    <li><strong>On the phone:</strong> delete conversations in the app, or delete the app to remove local Documents / preferences (Keychain items may survive reinstall on the same Apple ID — that is iOS behaviour).</li>
+    <li><strong>On your box:</strong> you control <code>conversations/</code>, logs, and related files; wipe them on the device.</li>
+    <li><strong>At cloud vendors:</strong> follow each vendor’s account / data tools; we cannot delete data held by them.</li>
+  </ul>
+
+  <h2>8. International transfers</h2>
+  <p>
+    If you use US-based LLM APIs or download models from abroad, your data leaves your country
+    under those providers’ terms. We do not offer a separate transfer mechanism.
+  </p>
+
+  <h2>9. No warranty; experimental risk</h2>
+  <p>
+    Keyman is provided <strong>as is</strong>. Features may record more than you expect, send data
+    to the wrong device, trigger smart-home actions, run coding agents, or produce harmful LLM output.
+    There is inherited, irreducible risk from connecting language models to tools and microphones.
+    By using Keyman you acknowledge that risk and that we make <strong>no guarantee</strong> about
+    privacy, safety, or fitness for any purpose — especially not medical, legal, financial, or
+    life-critical use.
+  </p>
+
+  <h2>10. Changes</h2>
+  <p>
+    We may update this policy in the repository. The “Effective date” at the top will change.
+    Continued use after an update means you accept the revised policy.
+  </p>
+
+  <h2>11. Contact</h2>
+  <p>
+    Questions about this policy: open an issue on the public repository
+    <a href="https://github.com/hakon0601/keyman-public">github.com/hakon0601/keyman-public</a>
+    (do not paste secrets, API keys, or real transcripts into issues).
+  </p>
+
+  <p class="footer">
+    Related: <a href="./terms-of-use.html">Terms of Use</a> ·
+    App Store privacy details are also declared in the app’s <code>PrivacyInfo.xcprivacy</code> manifest.
+  </p>
+</main>
+</body>
+</html>

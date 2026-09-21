@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyman — Terms of Use</title>
+  <style>
+    :root {
+      --bg: #0f1210;
+      --fg: #e8ebe6;
+      --muted: #9aa396;
+      --accent: #c4d4a8;
+      --rule: #2a312a;
+      --warn: #e0b36a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", "Source Sans 3", "Segoe UI", sans-serif;
+      background: radial-gradient(1200px 600px at 90% -10%, #1a2418 0%, var(--bg) 55%);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 {
+      font-family: "IBM Plex Serif", "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      letter-spacing: -0.02em;
+      margin: 0 0 0.35rem;
+    }
+    .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .banner {
+      border: 1px solid var(--warn);
+      background: rgba(224, 179, 106, 0.08);
+      color: var(--warn);
+      padding: 0.9rem 1rem;
+      margin: 0 0 1.75rem;
+      font-size: 0.95rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 2rem 0 0.6rem;
+      padding-top: 0.4rem;
+      border-top: 1px solid var(--rule);
+    }
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    a { color: var(--accent); }
+    .footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Keyman Terms of Use</h1>
+  <p class="meta">Effective date: 18 September 2026 · Custom EULA for the Keyman iOS app and related Keyman software.</p>
+
+  <div class="banner">
+    <strong>Highly experimental.</strong> Keyman wires microphones, language models, and (optionally)
+    powerful tools on your network. There is <em>no warranty</em> and <em>no guarantee</em> of safe,
+    private, or correct behaviour. If that is unacceptable, do not use Keyman.
+  </div>
+
+  <h2>1. Agreement</h2>
+  <p>
+    By downloading, installing, or using Keyman (the iOS app and any Keyman server / companion
+    software you run), you agree to these Terms and to the
+    <a href="./privacy-policy.html">Privacy Policy</a>. If you do not agree, do not use the software.
+  </p>
+  <p>
+    These Terms are a custom End User License Agreement (EULA) for App Store distribution.
+    They apply between you and Håkon Gimse (“Licensor”). Apple is not a party to this custom EULA
+    between you and Licensor, except that Apple and Apple’s subsidiaries are third-party beneficiaries
+    of the standard App Store Licensed Application End User License Agreement where that agreement applies,
+    and may enforce it. Your use of the App Store remains subject to Apple’s terms as well.
+  </p>
+
+  <h2>2. License</h2>
+  <p>
+    Subject to these Terms and any App Store rules, Licensor grants you a personal, non-exclusive,
+    non-transferable, revocable license to use the Keyman iOS app on Apple-branded devices you own or control.
+  </p>
+  <p>
+    Source code and server components may be proprietary or otherwise restricted by a separate
+    <code>LICENSE</code> in the repository. Access to a git repository does not by itself grant rights
+    beyond what that license and any written agreement say. Third-party libraries and models keep
+    their own licenses.
+  </p>
+
+  <h2>3. Experimental product — assume broad risk</h2>
+  <p>You understand and accept that Keyman may:</p>
+  <ul>
+    <li>Record audio and keep transcripts on the phone and/or on a Keyman box.</li>
+    <li>Send prompts and audio-derived text to third-party LLM / speech providers you configure.</li>
+    <li>Execute tools that change your environment (smart home, calendars, messaging, shell / coding agents on the box, and more).</li>
+    <li>Behave incorrectly, insecurely, or unpredictably because of LLM hallucinations, bugs, or misconfiguration.</li>
+    <li>Expose an unauthenticated HTTP API on your box to anyone who can reach that network path.</li>
+  </ul>
+  <p>
+    <strong>There is no guarantee</strong> that permissions, encryption, network isolation, or “offline”
+    modes will prevent disclosure or harmful actions. Inherited risk from LLM systems is accepted by you
+    as a condition of use.
+  </p>
+
+  <h2>4. Your responsibilities</h2>
+  <ul>
+    <li>Use Keyman only on networks and hardware you are allowed to operate.</li>
+    <li>Do not point the app at systems you do not control without authorization.</li>
+    <li>Keep API keys, invite codes, and Tailscale access under your control.</li>
+    <li>Do not rely on Keyman for emergencies, medical advice, legal advice, weapons, or life safety.</li>
+    <li>Comply with law, Apple’s App Store Review Guidelines, and third-party provider terms (OpenAI, Anthropic, xAI, Hugging Face, etc.).</li>
+    <li>Inform others in earshot if a microphone-enabled Keyman device is listening.</li>
+  </ul>
+
+  <h2>5. Acceptable use</h2>
+  <p>You must not use Keyman to:</p>
+  <ul>
+    <li>Violate law or others’ rights (including privacy and computer misuse).</li>
+    <li>Attack, scan, or exploit networks or devices without permission.</li>
+    <li>Generate or distribute child sexual abuse material or other illegal content.</li>
+    <li>Bypass security or authentication of any system except systems you own and are testing lawfully.</li>
+  </ul>
+
+  <h2>6. No warranty</h2>
+  <p>
+    KEYMAN IS PROVIDED “AS IS” AND “AS AVAILABLE”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+    INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+    LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE SECURE, PRIVATE, UNINTERRUPTED, ACCURATE,
+    OR FREE OF HARMFUL OUTPUT OR ACTIONS.
+  </p>
+
+  <h2>7. Limitation of liability</h2>
+  <p>
+    TO THE MAXIMUM EXTENT PERMITTED BY LAW, LICENSOR IS NOT LIABLE FOR ANY INDIRECT, INCIDENTAL,
+    SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF DATA, PROFITS, GOODWILL,
+    HOME AUTOMATION MISFIRE, ACCOUNT TAKEOVER, OR MODEL-PROVIDER BILLING, ARISING FROM YOUR USE OF
+    KEYMAN — EVEN IF ADVISED OF THE POSSIBILITY.
+  </p>
+  <p>
+    TO THE MAXIMUM EXTENT PERMITTED BY LAW, LICENSOR’S TOTAL LIABILITY FOR ANY CLAIM RELATING TO
+    KEYMAN IS LIMITED TO THE GREATER OF (A) THE AMOUNT YOU PAID LICENSOR FOR THE APP IN THE
+    THREE MONTHS BEFORE THE CLAIM, OR (B) ZERO IF THE APP WAS FREE.
+  </p>
+  <p>
+    Some jurisdictions do not allow certain limitations; in those places, liability is limited to
+    the minimum permitted by law.
+  </p>
+
+  <h2>8. Indemnity</h2>
+  <p>
+    You agree to indemnify and hold harmless Licensor from claims arising out of your use of Keyman,
+    your configuration of servers and API keys, or your violation of these Terms or of third-party rights.
+  </p>
+
+  <h2>9. Termination</h2>
+  <p>
+    This license ends if you breach these Terms or if Apple / Licensor terminate distribution.
+    On termination you must stop using the app and delete local copies. Sections on disclaimer,
+    liability, indemnity, and experimental risk survive.
+  </p>
+
+  <h2>10. Changes</h2>
+  <p>
+    We may update these Terms in the repository. The effective date will change. Continued use
+    after an update constitutes acceptance.
+  </p>
+
+  <h2>11. Governing law</h2>
+  <p>
+    These Terms are governed by the laws of Norway, without regard to conflict-of-law rules,
+    except where mandatory consumer protections in your country of residence apply and cannot
+    be waived. Courts of Oslo, Norway, have non-exclusive jurisdiction, subject to those protections.
+  </p>
+
+  <h2>12. Contact</h2>
+  <p>
+    <a href="https://github.com/hakon0601/keyman-public">github.com/hakon0601/keyman-public</a>
+    — open an issue (no secrets or private transcripts).
+  </p>
+
+  <p class="footer">
+    Related: <a href="./privacy-policy.html">Privacy Policy</a>
+  </p>
+</main>
+</body>
+</html>
